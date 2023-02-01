@@ -205,4 +205,7 @@ db.products.find({},{product_name:1,product_material:1,_id:0})
 db.products.find({ product_material:'Soft'})
 
 //9. Find products which contain product color indigo  and product price 492.00
-db.products.find({$and:[{ product_color:'plum'},{   product_price: 492}] })
+db.products.find({$and:[{ product_color:'indigo'},{   product_price: 492}] })
+
+//10.Delete the products which product price value are same
+db.products.deleteMany({})
